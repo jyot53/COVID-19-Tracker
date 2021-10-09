@@ -32,7 +32,7 @@ const App = () => {
       setCountryInfo(data);
     });
 
-    await fetch('https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/news/get-health-news/1',{
+    await fetch('https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/news/get-vaccine-news/0',{
       method: 'GET',
       headers: {
         'x-rapidapi-host': 'vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com',
@@ -40,7 +40,7 @@ const App = () => {
       }
     }).then((response)=>response.json()).then((data)=>{
 
-      console.log(data);
+      // console.log(data);
       setVaccineNews(data.news);
     })
 
@@ -161,7 +161,7 @@ const App = () => {
     </div>
     
     <section className="news">
-      <h1>Vaccine News</h1>
+      {/* <p> current news data {vaccineNews[0]}</p> */}
       <News vaccineNews = {vaccineNews}/>    
     </section>
 

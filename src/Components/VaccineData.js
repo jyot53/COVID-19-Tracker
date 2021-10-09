@@ -34,13 +34,11 @@ const options = {
       ],
       yAxes: [
         {
-          gridLines: {
-            display: false,
-          },
           ticks: {
             // Include a dollar sign in the ticks
+            beginAtZero: true,
             callback: function (value, index, values) {
-              return value;
+              return `#${value}`;
             },
           },
         },

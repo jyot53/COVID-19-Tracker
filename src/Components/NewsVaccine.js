@@ -1,9 +1,11 @@
 import React from 'react'
 import {Card,CardContent,Link,Grid,Container} from '@material-ui/core';
 const NewsVaccine = ({vaccineNews}) => {
-    console.log(vaccineNews);
+    // console.log(vaccineNews);
     return (
+         
         <Container>
+            <h1>Vaccine News page</h1> 
             <Grid container>
                 {
                 vaccineNews.map((n)=>{

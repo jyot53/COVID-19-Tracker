@@ -17,38 +17,37 @@ const StateData = () => {
     return (
         <div className="state-div">
             <Container >
-            <h1 className="state-heading">State Wise Covid-19 Data of India</h1>
-<TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead className="state-table-head">
-          <TableRow>
-            <TableCell><span>State</span></TableCell>
-            <TableCell align="right"><span> Confirmed </span></TableCell>
-            <TableCell align="right"><span>Recovered</span></TableCell>
-            <TableCell align="right"><span>Deaths</span></TableCell>
-            <TableCell align="right"><span>Active</span></TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {state_data.map((state) => (
-            <TableRow
-              key={state.State_code}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-              <p className="state_namecell">{state.State}</p>
-              </TableCell>
-              <TableCell align="right" >{numeral(state.Confirmed).format('0,0')} </TableCell>
-              <TableCell align="right">{numeral(state.Recovered).format('0,0')}</TableCell>
-              <TableCell align="right">{numeral(state.Deaths).format('0,0')}</TableCell>
-              <TableCell align="right">{numeral(state.Active).format('0,0')}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-
-        </Container>
+              <h1 className="state-heading">State Wise Covid-19 Data of India</h1>
+              <TableContainer component={Paper}>
+                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead className="state-table-head">
+                      <TableRow>
+                        <TableCell><span>State</span></TableCell>
+                        <TableCell align="right"><span> Confirmed </span></TableCell>
+                        <TableCell align="right"><span>Recovered</span></TableCell>
+                        <TableCell align="right"><span>Deaths</span></TableCell>
+                        <TableCell align="right"><span>Active</span></TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {state_data.map((state) => (
+                      <TableRow
+                        key={state.State_code}
+                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                      >
+                        <TableCell component="th" scope="row">
+                        <p className="state_namecell">{state.State}</p>
+                        </TableCell>
+                        <TableCell align="right" >{numeral(state.Confirmed).format('0,0')} </TableCell>
+                        <TableCell align="right">{numeral(state.Recovered).format('0,0')}</TableCell>
+                        <TableCell align="right">{numeral(state.Deaths).format('0,0')}</TableCell>
+                        <TableCell align="right">{numeral(state.Active).format('0,0')}</TableCell>
+                      </TableRow>
+                      ))}
+                    </TableBody>
+                </Table>
+              </TableContainer>
+            </Container>
         </div>
         
         
