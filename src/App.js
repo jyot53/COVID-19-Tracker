@@ -180,7 +180,7 @@ const App = () => {
       <StateData/>
     </div>
 
-    <div className="vaccineIndia">
+    {/* <div className="vaccineIndia">
           <FormControl className="app_dropdown">
             <Select 
               variant="outlined" 
@@ -194,7 +194,7 @@ const App = () => {
             </Select>  
           </FormControl>
       <VaccineData state={currIndianState}/>
-    </div>
+    </div> */}
 
 
 
